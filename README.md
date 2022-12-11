@@ -1,3 +1,8 @@
+Requirements
+- PHP 8.0 or 8.1
+- XAMPP
+- Laravel 9
+
 How to Run
 - Clone the repository to C:\xampp\htdocs
 - Run XAMPP and start Apache and MySQL
