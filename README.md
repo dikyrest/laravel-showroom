@@ -22,6 +22,7 @@ DB_PASSWORD={root password}
 ```
 php artisan migrate
 php artisan db:seed
+php artisan storage:link
 php artisan serve
 ```
 - Open a browser and go to http://localhost:8000
