@@ -4,7 +4,7 @@ Requirements
 - Laravel 9
 
 How to Run
-- Clone the repository to C:\xampp\htdocs
+- Clone the repository
 - Run XAMPP and start Apache and MySQL
 - Open a browser and go to http://localhost/phpmyadmin
 - Create a database named "wad_modul5_febri"
