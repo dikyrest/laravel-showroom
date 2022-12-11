@@ -32,9 +32,9 @@ Route::get('/items', [ShowroomController::class, 'index'])->middleware('auth');
 
 Route::get('/add', [ShowroomController::class, 'add'])->middleware('auth');
 
-Route::post('/item', [ShowroomController::class, 'create'])->middleware('auth');
+Route::post('/items', [ShowroomController::class, 'create'])->middleware('auth');
 
-Route::put('/item/{id}', [ShowroomController::class, 'update'])->middleware('auth');
+Route::put('/items/{id}', [ShowroomController::class, 'update'])->middleware('auth');
 
 Route::get('/items/{id}', [ShowroomController::class, 'detail'])->middleware('auth');
 

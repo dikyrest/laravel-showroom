@@ -11,7 +11,7 @@
         <img src="{{ asset('storage/' . $showroom->image) }}" class="shadow me-3 rounded">
     </div>
     <div class="align-self-center w-40rem">
-        <form action="/items/{{ $showroom->id }}/edit" method="get" enctype="multipart/form-data">
+        <form action="/items/{{ $showroom->id }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">

@@ -80,20 +80,20 @@ class ShowroomController extends Controller
     public function update(Request $request, $id)
     {
         $showroom = Showroom::findOrFail($id);
-        $showroom->user_id = 1;
+        $showroom->user_id = Auth::user()->id;
         $showroom->name = $request->name;
         $showroom->owner = $request->owner;
         $showroom->brand = $request->brand;;
         $showroom->purchase_date = $request->purchase_date ?? $showroom->purchase_date;
         $showroom->description = $request->description;
+        if ($request->image) {
+            $showroom->image = $request->file('image')->getClientOriginalName();
+            $request->file('image')->storeAs('public', $request->file('image')->getClientOriginalName());
+        }
         $showroom->image = $request->image ?? $showroom->image;
         $showroom->status = $request->status;;
         $showroom->updated_at = now();
         $showroom->save();
-
-        if ($request->file('image')) {
-            $request->file('image')->storeAs('public', $request->file('image')->getClientOriginalName());
-        }
 
         return redirect('/items');
     }

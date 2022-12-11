@@ -7,7 +7,7 @@
     <p>Tambah mobil baru Anda ke list showroom.</p>
 
     <div class="container w-50">
-        <form action="/item" method="post" enctype="multipart/form-data">
+        <form action="/items" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="car-name" class="form-label">Nama Mobil</label>
