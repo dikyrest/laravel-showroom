@@ -14,7 +14,7 @@
 @endif
 <div class="row">
     <h1>My Show Room</h1>
-    <p>List Show Room Tsania Rifqa - NIM</p>
+    <p>List Show Room Tsania Rifqa Annisa - NIM</p>
 </div>
 <div class="row">
     @foreach ($showrooms as $showroom)

@@ -23,7 +23,7 @@
                 <img src="{{ asset('storage/logo-ead.png') }}" class="card-img-top">
             </div>
             <div class="col-sm">
-            Tsania Rifqa - NIM
+            Tsania Rifqa Annisa - NIM
             </div>
         </div>
     </div>
