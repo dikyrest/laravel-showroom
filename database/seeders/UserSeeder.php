@@ -22,14 +22,14 @@ class UserSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         $data = [
-            ['name' => 'Febri', 'email' => 'febri@febri.com', 'password' => bcrypt('12345678'), 'telephone' => '08123456789'],
+            ['name' => 'Tsania', 'email' => 'tsania@tsania.com', 'password' => bcrypt('12345678'), 'telephone' => '08123456789'],
             ['name' => 'Diky', 'email' => 'diky@diky.com', 'password' => bcrypt('12345678'), 'telephone' => '08123456789']
         ];
 
         foreach ($data as $item) {
             User::insert([
                 'name' => $item['name'],
-                'no_hp' => $item['telephone'],
+                'telephone' => $item['telephone'],
                 'email' => $item['email'],
                 'password' => $item['password'],
                 'created_at' => Carbon::now(),

@@ -3,14 +3,15 @@
 @section('title', 'Detail')
 
 @section('content')
-<h1>{{ $showroom->name }}</h1>
-<p>Detail Mobil {{ $showroom->name }}</p>
-
-<div class="d-flex justify-content-around flex-wrap">
-    <div class="align-self-center w-50rem">
+<div class="row">
+    <h1>{{ $showroom->name }}</h1>
+    <p>Detail Mobil {{ $showroom->name }}</p>
+</div>
+<div class="row">
+    <div class="col-md-3 w-auto">
         <img src="{{ asset('storage/' . $showroom->image) }}" class="shadow me-3 rounded img-fluid">
     </div>
-    <div class="align-self-center w-40rem">
+    <div class="col-md-5">
         <form action="/items/{{ $showroom->id }}/edit" method="get" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>

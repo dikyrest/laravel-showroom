@@ -39,7 +39,7 @@ class UserController extends Controller
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->no_hp = $request->no_hp;
+        $user->telephone = $request->telephone;
         $user->password = Hash::make($request->password);
         $user->save();
 
@@ -71,6 +71,11 @@ class UserController extends Controller
             Session::flash('status', 'Success');
             Session::flash('message', 'Login berhasil');
 
+            if (isset($request->rememberMe)) {
+                // set cookie for 7 days
+                setcookie('email', $request->email, time() + (86400 * 7), "/");
+            }
+
             $request->session()->regenerate();
 
             return redirect()->intended('/');
@@ -91,12 +96,15 @@ class UserController extends Controller
         $user = User::find(Auth::user()->id);
         $user->name = $request->name;
         $user->email = $user->email;
-        $user->no_hp = $request->no_hp;
+        $user->telephone = $request->telephone;
         $user->save();
 
         if ($user) {
             Session::flash('status', 'Success');
             Session::flash('message', 'Profil berhasil diperbarui');
+
+            setcookie('nav-color', $request->navbar_color, time() + (86400 * 7), "/");
+
             return redirect('/profile');
         } else {
             Session::flash('status', 'Failed');

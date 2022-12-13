@@ -3,14 +3,15 @@
 @section('title', 'Edit')
 
 @section('content')
-<h1>Edit</h1>
-<p>Edit Mobil {{ $showroom->name }}</p>
-
-<div class="d-flex justify-content-around flex-wrap">
-    <div class="align-self-center w-50rem">
+<div class="row">
+    <h1>Edit</h1>
+    <p>Edit Mobil {{ $showroom->name }}</p>
+</div>
+<div class="row">
+    <div class="col-md-3 w-auto">
         <img src="{{ asset('storage/' . $showroom->image) }}" class="shadow me-3 rounded">
     </div>
-    <div class="align-self-center w-40rem">
+    <div class="col-md-5">
         <form action="/items/{{ $showroom->id }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')

@@ -7,14 +7,14 @@ How to Run
 - Clone the repository
 - Run XAMPP and start Apache and MySQL
 - Open a browser and go to http://localhost/phpmyadmin
-- Create a database named "wad_modul5_febri"
+- Create a database named "wad_modul5_tsania"
 - Rename the .env.example file to .env
 - Configure the .env file as follows
 ```
 DB_CONNECTION=mysql
 DB_HOST={db host}
 DB_PORT={db port}
-DB_DATABASE=wad_modul5_febri
+DB_DATABASE=wad_modul5_tsania
 DB_USERNAME=root
 DB_PASSWORD={root password}
 ```

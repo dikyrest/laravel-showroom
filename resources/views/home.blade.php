@@ -3,21 +3,32 @@
 @section('title', 'Home')
 
 @section('content')
-<div class="row justify-content-md-center align-items-center pt-5">
-    <div class="col-sm align-items-center">
-        <h1>Selamat Datang Di Show Room {{ Auth::user()->name ?? '' }}</h1>
-        <p>Ini adalah show room dengan layanan berkualitas</p>
+@if (Session::has('status') && Session::get('status') == 'Success')
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('message') }}
+    </div>
+@elseif (Session::has('status') && Session::get('status') == 'Failed')
+    <div class="alert alert-danger" role="alert">
+        {{ Session::get('message') }}
+    </div>
+@endif
+<div class="row align-items-center pt-5">
+    <div class="col-sm">
         <div class="row">
+            <h1>Selamat Datang Di Show Room {{ Auth::user()->name ?? '' }}</h1>
+                <p>Ini adalah show room dengan layanan berkualitas</p>
+        </div>
+        <div class="row mt-3">
             <div class="col-md-4">
                 <img src="{{ asset('storage/logo-ead.png') }}" class="card-img-top">
             </div>
             <div class="col-sm">
-            Febrilia Putri Inzani_1202201378
+            Tsania Rifqa - NIM
             </div>
         </div>
     </div>
-    <div class="col-sm align-items-center">
-        <img src="{{ asset('storage/car.jpg') }}" class="shadow me-3 rounded">
+    <div class="col-sm">
+        <img src="{{ asset('storage/car.jpg') }}" class="shadow me-3 w-100 rounded">
     </div>
 </div>
 @endsection

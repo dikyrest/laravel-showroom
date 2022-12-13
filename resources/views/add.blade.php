@@ -3,10 +3,12 @@
 @section('title', 'Add')
 
 @section('content')
+<div class="row">
     <h1>Tambah Mobil</h1>
     <p>Tambah mobil baru Anda ke list showroom.</p>
-
-    <div class="container w-50">
+</div>
+<div class="row">
+    <div class="col-md-5">
         <form action="/items" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -55,4 +57,5 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+</div>
 @endsection
