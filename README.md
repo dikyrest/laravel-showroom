@@ -2,9 +2,15 @@ Requirements
 - PHP 8.0 or 8.1
 - XAMPP
 - Laravel 9
+- Composer: click [here](https://getcomposer.org/download/) to download
 
 How to Run
 - Clone the repository
+- Open the project folder in terminal
+- Run this code to install the dependencies
+```
+composer install
+```
 - Run XAMPP and start Apache and MySQL
 - Open a browser and go to http://localhost/phpmyadmin
 - Create a database named "wad_modul5_tsania"
